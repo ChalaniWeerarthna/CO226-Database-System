@@ -1,0 +1,131 @@
+ <!DOCTYPE >
+<html>
+
+<head>
+
+  <style>
+          
+       /* Create two equal columns that floats next to each other */
+    .column1 {
+
+        float: left;
+        width: 350px;
+        padding: 5px;
+        height: 300px; /* Should be removed. Only for demonstration */
+        text-align: center;
+        line-height: 50px;
+
+  }
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+
+float: left;
+width: 400px;
+padding: 5px;
+height: 300px; /* Should be removed. Only for demonstration */
+line-height: 50px;
+text-align: left;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.a{
+
+line-height: 50px;
+}
+.b{
+
+line-height: 100px;
+}
+.c{
+
+line-height: 250px;
+}
+header{
+
+padding-left:0.5px;
+margin:95px;
+background-color: aqua;
+
+}
+body{
+   margin:200px;
+   border:solid;
+   height: 1000px;
+   border-color: black;
+
+}
+
+          
+</style>
+    
+</head>
+
+<body>
+   <header>
+      <h1> Buy T-shirts Online</h1>
+      <h2> Fill out the form bellow and click "Order Now" to order </h2>
+   </header>
+<div class="row"></div>
+    <div class="column1">
+        <form>
+            <div class="a">
+                Search by order number: <br>
+                Choose your size: <br>
+            
+                Choose your color: <br>
+              <div class="b">
+                Extra Items: <br>
+                <div class="c">
+                  Diliver To:  <br>
+                </div>
+              </div>
+            </div>
+                Your Comments:  <br>
+         </form>
+    </div>
+    <div class="column2">
+        
+            <form action="post.php" method="POST">
+
+                        <input type="text" name="number"> <input type="submit" value="Search"><br>
+                        <input type="radio" name="size" value="small" checked>Small   
+                        <input type="radio" name="size" value="medium">Medium 
+                        <input type="radio" name="size" value="large">Large <br>
+                        <select name="colors"> 
+                            <option value="red">Red</option>
+                            <option value="purple">Purple</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option> 
+                          </select> <br>
+                
+                        <input type="checkbox" name="extra1" value="cap" checked>Cap<br>
+                                 
+                    
+                        <input type="checkbox" name="extra2" value="wristBand">Wrist Band<br>
+                 <div class="row1"></div>
+                    <div class="column3">
+                       First Name: <input type="text" name="firstName" ><br>
+                       Last Name: <input type="text" name="lastName"><br>
+                       Address1: <input type="text" name="add1"><br>
+                       Address2: <input type="text" name="add2" ><br>
+                       Address3: <input type="text" name="add3" ><br>
+                     </div>
+                     
+                        <textarea name="comments" name="comments" ></textarea><br>
+                        <input type="submit" name="submit" value="Order Now">
+                    
+            </form>       
+    
+   </div>
+
+</div>
+</body>
+</html>
